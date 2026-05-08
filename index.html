@@ -1,35 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Achraf Elinani</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b0f19;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #9ca3af;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      border-left: 4px solid #2563eb;
+      padding-left: 15px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #1f2937;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #60a5fa;
+    }
+
+    .card p {
+      color: #d1d5db;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #2563eb;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 80px;
+      color: #6b7280;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+  </style>
 </head>
+
 <body>
-  <h1>Achraf Elinani</h1>
-  <p>Electrical and Computer Engineering student at Ohio State.</p>
-  <p>Interested in semiconductors, power, batteries, and technology policy.</p>
 
-  <h2>Engineering Projects</h2>
-  <ul>
-    <li>
-      <strong>Battery Manufacturing Dry Room Safety System</strong><br>
-      Designed a monitoring approach for H2S risk mitigation and sensor placement in a battery manufacturing dry room.
-    </li>
-    <li>
-      <strong>Power & Semiconductor Systems</strong><br>
-      Projects focused on power engineering, semiconductor manufacturing, and facility infrastructure.
-    </li>
-  </ul>
+  <div class="container">
 
-  <h2>Economic Papers</h2>
-  <ul>
-    <li>
-      <strong>Semiconductor Manufacturing and U.S. Industrial Policy</strong><br>
-      Research on how policy, economics, and global supply chains shape the semiconductor industry.
-    </li>
-    <li>
-      <strong>Energy Infrastructure and Economic Development</strong><br>
-      Analysis of how energy investments affect manufacturing growth and national competitiveness.
-    </li>
-  </ul>
+    <h1>Achraf Elinani</h1>
+
+    <p class="subtitle">
+      Electrical and Computer Engineering student at Ohio State focused on semiconductors, power systems, batteries, and technology policy.
+    </p>
+
+    <h2>Engineering Projects</h2>
+
+    <div class="card">
+      <h3>Battery Manufacturing Dry Room Safety System</h3>
+      <p>
+        Designed a monitoring strategy for H2S mitigation and optimized sensor placement within a battery manufacturing dry room environment.
+      </p>
+      <span class="tag">Battery Manufacturing</span>
+    </div>
+
+    <div class="card">
+      <h3>Power & Semiconductor Systems</h3>
+      <p>
+        Research and engineering projects centered around semiconductor infrastructure, power engineering, and advanced manufacturing systems.
+      </p>
+      <span class="tag">Semiconductors</span>
+    </div>
+
+    <h2>Economic Papers</h2>
+
+    <div class="card">
+      <h3>Semiconductor Manufacturing & U.S. Industrial Policy</h3>
+      <p>
+        Examined how economics, geopolitics, and industrial policy influence domestic semiconductor manufacturing and global supply chains.
+      </p>
+      <span class="tag">Economics</span>
+    </div>
+
+    <div class="card">
+      <h3>Energy Infrastructure & Economic Development</h3>
+      <p>
+        Analyzed how energy infrastructure investments shape industrial growth, national competitiveness, and manufacturing expansion.
+      </p>
+      <span class="tag">Energy Policy</span>
+    </div>
+
+    <div class="footer">
+      © 2026 Achraf Elinani
+    </div>
+
+  </div>
+
 </body>
 </html>
