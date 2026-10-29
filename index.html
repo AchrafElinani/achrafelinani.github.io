@@ -3,1113 +3,357 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Achraf Elinani | Engineering, Economics, and English">
-<title>Achraf Elinani</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achraf Elinani — Personal Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #f7f5f2;
-  --paper: #f0ede8;
-  --text: #242220;
-  --muted: #706b67;
-  --red: #b83232;
-  --line: #dedad4;
-  --serif: 'EB Garamond', Georgia, serif;
-  --sans: 'DM Sans', Arial, sans-serif;
-}
-
-* { box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font: 14px/1.8 var(--sans);
-}
-
-a { color: inherit; }
-a:hover { color: var(--red); }
-a:focus-visible {
-  outline: 2px solid var(--red);
-  outline-offset: 4px;
-}
-
-.container {
-  max-width: 1060px;
-  margin: auto;
-  padding: 0 35px;
-}
-
-/* NAVIGATION */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(247,245,242,.97);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
-}
-
-.nav {
-  max-width: 1060px;
-  padding: 18px 35px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  font: 500 24px var(--serif);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.logo span { color: var(--red); }
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-nav a {
-  font-size: 12px;
-  color: var(--muted);
-  text-decoration: none;
-}
-
-/* TYPOGRAPHY */
-
-h1, h2, h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-}
-
-h1 {
-  font-size: clamp(52px, 7vw, 83px);
-  line-height: 1.02;
-  letter-spacing: -1.8px;
-  margin: 0 0 30px;
-}
-
-h1 em {
-  color: var(--red);
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 44px;
-  line-height: 1.1;
-  margin: 0;
-}
-
-.eyebrow, .category {
-  font-size: 11px;
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-}
-
-.description {
-  color: var(--muted);
-  font-weight: 300;
-  max-width: 700px;
-  line-height: 2;
-  margin-bottom: 35px;
-}
-
-/* HERO */
-
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 290px;
-  gap: 75px;
-  align-items: center;
-  padding: 95px 0 105px;
-}
-
-.hero .eyebrow { margin-bottom: 25px; }
-
-.intro {
-  max-width: 570px;
-  font-size: 15px;
-  line-height: 2;
-  color: var(--muted);
-  font-weight: 300;
-  margin-bottom: 30px;
-}
-
-.button {
-  display: inline-block;
-  background: var(--red);
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  font-size: 12px;
-  font-weight: 500;
-  transition: background .2s;
-}
-
-.button:hover {
-  background: #942525;
-  color: white;
-}
-
-.portrait {
-  position: relative;
-  width: 100%;
-}
-
-.portrait::after {
-  content: "";
-  position: absolute;
-  border: 1px solid var(--red);
-  top: 13px;
-  left: 13px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.portrait img {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  display: block;
-  background: var(--paper);
-}
-
-/* SECTIONS */
-
-section {
-  border-top: 1px solid var(--line);
-  padding: 75px 0 85px;
-}
-
-.section-heading {
-  display: flex;
-  align-items: baseline;
-  gap: 18px;
-  margin-bottom: 30px;
-}
-
-.number {
-  font-size: 12px;
-  color: var(--red);
-}
-
-/* DISCIPLINE CARDS */
-
-.disciplines {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.discipline {
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: 26px;
-  text-decoration: none;
-  transition: border-color .2s, transform .2s;
-}
-
-.discipline:hover {
-  border-color: var(--red);
-  transform: translateY(-3px);
-  color: inherit;
-}
-
-.discipline h3 {
-  font-size: 32px;
-  margin: 18px 0 10px;
-}
-
-.discipline p, .card p {
-  font-size: 13px;
-  line-height: 1.9;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-.arrow {
-  display: inline-block;
-  color: var(--red);
-  font-size: 12px;
-  margin-top: 15px;
-}
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 70px;
-}
-
-.about-grid p {
-  color: var(--muted);
-  line-height: 2;
-  font-weight: 300;
-}
-
-.fact {
-  border-bottom: 1px solid var(--line);
-  padding: 13px 0;
-  display: grid;
-  grid-template-columns: 95px 1fr;
-  gap: 10px;
-  font-size: 12px;
-}
-
-.fact strong { font-weight: 500; }
-.fact span { color: var(--muted); }
-
-/* PROFESSIONAL EXPERIENCE WITH LOGOS */
-
-.experience {
-  display: grid;
-  grid-template-columns: 85px 1fr;
-  gap: 25px;
-  padding: 31px 0;
-  border-top: 1px solid var(--line);
-  align-items: start;
-}
-
-.experience:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.company-logo {
-  width: 82px;
-  height: 82px;
-  padding: 9px;
-  object-fit: contain;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 3px;
-}
-
-.experience h3 {
-  font-size: 28px;
-  line-height: 1.2;
-  margin: 0 0 7px;
-}
-
-.organization {
-  color: var(--red);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 13px;
-}
-
-.experience p {
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 1.95;
-  max-width: 730px;
-  margin: 0;
-}
-
-.company-meta {
-  margin-top: 12px;
-  font-size: 11px;
-  color: #99928d;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 16px;
-}
-
-.tag {
-  border: 1px solid var(--line);
-  font-size: 10px;
-  color: var(--muted);
-  padding: 3px 9px;
-}
-
-/* RESEARCH ENTRIES */
-
-.entry {
-  display: grid;
-  grid-template-columns: 165px 1fr;
-  gap: 30px;
-  padding: 30px 0;
-  border-top: 1px solid var(--line);
-}
-
-.entry:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.entry-label {
-  font-size: 11px;
-  color: #99928d;
-  padding-top: 5px;
-}
-
-.entry h3 {
-  font-size: 27px;
-  line-height: 1.2;
-  margin: 0 0 7px;
-}
-
-.entry p {
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 1.9;
-  margin: 0;
-}
-
-/* PROJECT CARDS */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.card {
-  border: 1px solid var(--line);
-  padding: 26px;
-  background: var(--paper);
-}
-
-.card h3 {
-  font-size: 27px;
-  line-height: 1.2;
-  margin: 15px 0;
-}
-
-/* CONTACT */
-
-.contact-title {
-  font: 400 34px var(--serif);
-  margin-bottom: 15px;
-}
-
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.contact-links a {
-  border: 1px solid var(--line);
-  padding: 10px 18px;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.contact-links a:hover {
-  border-color: var(--red);
-}
-
-/* FOOTER */
-
-footer {
-  border-top: 1px solid var(--line);
-  color: #99928d;
-  font-size: 11px;
-  padding: 30px 0;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-/* MOBILE */
-
-@media (max-width: 750px) {
-  .container { padding: 0 22px; }
-
-  .nav {
-    padding: 15px 22px;
-    display: block;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f5f2;
+    --bg2: #eeebe6;
+    --border: #ddd9d3;
+    --accent: #2b2b2b;
+    --accent2: #444;
+    --red: #b83232;
+    --red2: #961f1f;
+    --text: #1e1e1e;
+    --muted: #6a6460;
+    --light: #a09c97;
+    --sans: 'DM Sans', sans-serif;
+    --serif: 'EB Garamond', Georgia, serif;
   }
 
-  nav { margin-top: 10px; gap: 12px 17px; }
+  html { scroll-behavior: smooth; }
 
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .wrapper { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  nav {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav .inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  nav .logo {
+    font-family: var(--serif); font-size: 18px; font-weight: 500;
+    color: var(--text); text-decoration: none; letter-spacing: 0.01em;
+  }
+  nav .logo span { color: var(--red); }
+  nav ul { list-style: none; display: flex; gap: 32px; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 400; transition: color 0.2s; }
+  nav a:hover { color: var(--red); }
+
+  /* HERO */
   .hero {
-    grid-template-columns: 1fr;
-    padding: 50px 0 65px;
-    gap: 45px;
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+  }
+  @media(max-width:600px){ .hero { grid-template-columns: 1fr; } .monogram { display: none; } }
+
+  .hero-eyebrow {
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--red); font-weight: 500; margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(38px, 5.5vw, 58px);
+    font-weight: 400; line-height: 1.1;
+    color: var(--text); margin-bottom: 20px;
+  }
+  h1 em { color: var(--red); font-style: normal; }
+  .hero-sub {
+    font-size: 15px; color: var(--muted); max-width: 500px;
+    line-height: 1.85; margin-bottom: 32px; font-weight: 300;
+  }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 10px 24px;
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    text-decoration: none; border-radius: 2px; transition: all 0.18s; cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { background: var(--red2); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--muted); background: transparent; }
+  .btn-ghost:hover { border-color: var(--red); color: var(--red); }
+
+  .monogram {
+    width: 450px; height: 450px; border: 2px solid var(--red);
+    border-radius: 2px; display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 36px; color: var(--red);
+    background: var(--bg2); flex-shrink: 0;
   }
 
-  .portrait { max-width: 230px; }
-  h1 { font-size: 57px; }
-  h2 { font-size: 36px; }
-
-  section { padding: 55px 0; }
-
-  .disciplines,
-  .cards,
-  .about-grid {
-    grid-template-columns: 1fr;
+  /* SECTION */
+  section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 40px; }
+  .section-num { font-size: 12px; color: var(--red); font-weight: 500; letter-spacing: 0.06em; }
+  h2 {
+    font-family: var(--serif); font-size: clamp(22px, 3vw, 28px);
+    font-weight: 400; color: var(--text); letter-spacing: 0.01em;
   }
 
+  /* ABOUT */
+  .about-body { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media(max-width:600px){ .about-body { grid-template-columns: 1fr; } }
+  .about-col h3 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--red); font-weight: 500; margin-bottom: 12px;
+  }
+  .about-col p { font-size: 14px; color: var(--muted); line-height: 1.85; font-weight: 300; }
+
+  /* ENTRIES */
+  .entries { display: flex; flex-direction: column; }
   .entry {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+    display: grid; grid-template-columns: 120px 1fr;
+    gap: 24px;
+  }
+  .entry:last-child { border-bottom: none; }
+  @media(max-width:600px){ .entry { grid-template-columns: 1fr; gap: 8px; } }
+  .entry-date { font-size: 12px; color: var(--light); padding-top: 3px; font-weight: 300; }
+  .entry-title {
+    font-family: var(--serif); font-size: 17px; font-weight: 500;
+    color: var(--text); margin-bottom: 4px; line-height: 1.35;
+  }
+  .entry-org {
+    font-size: 11px; color: var(--red); font-weight: 500;
+    letter-spacing: 0.07em; margin-bottom: 8px; text-transform: uppercase;
+  }
+  .entry-desc { font-size: 14px; color: var(--muted); line-height: 1.8; font-weight: 300; }
+  .entry-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .tag {
+    font-size: 10px; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--light); border: 1px solid var(--border);
+    padding: 3px 10px; border-radius: 1px; font-weight: 400;
   }
 
-  .experience {
-    grid-template-columns: 62px 1fr;
-    gap: 15px;
+  /* SKILLS */
+  .skills-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px; }
+  .skill-group h3 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--red); font-weight: 500; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 2px solid var(--red);
   }
+  .skill-group ul { list-style: none; }
+  .skill-group li { font-size: 13px; color: var(--muted); padding: 5px 0; font-weight: 300; border-bottom: 1px solid var(--border); }
+  .skill-group li:last-child { border-bottom: none; }
 
-  .company-logo {
-    width: 60px;
-    height: 60px;
-    padding: 6px;
+  /* CONTACT */
+  .contact-body { display: flex; gap: 12px; flex-wrap: wrap; }
+  .contact-link {
+    display: flex; align-items: center; gap: 10px;
+    border: 1px solid var(--border); border-radius: 2px;
+    padding: 12px 20px; text-decoration: none;
+    color: var(--muted); font-size: 13px; font-weight: 400;
+    transition: all 0.18s;
   }
+  .contact-link:hover { border-color: var(--red); color: var(--red); }
 
-  .experience h3 { font-size: 24px; }
-  .about-grid { gap: 25px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { transition: none !important; }
-}
+  footer {
+    padding: 32px 0; text-align: center;
+    font-size: 12px; color: var(--light);
+  }
+  footer span { color: var(--red); }
 </style>
 </head>
-
 <body>
 
-<header>
-  <div class="nav">
-    <a href="#home" class="logo">
-      Achraf <span>Elinani.</span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#engineering">Engineering</a>
-      <a href="#economics">Economics</a>
-      <a href="#english">English</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<nav>
+  <div class="inner">
+    <a href="#" class="logo">Achraf Elinani</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Research</a></li>
+      <li><a href="#writing">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<main class="container">
+<div class="wrapper">
 
-<!-- HOME -->
-
-<div class="hero" id="home">
-  <div>
-    <div class="eyebrow">The Ohio State University</div>
-
-    <h1>
-      Engineering,<br>
-      Economics,<br>
-      <em>and English.</em>
-    </h1>
-
-    <p class="intro">
-      I study how technology is engineered, how industries
-      develop, and how complex ideas are communicated.
-      My work spans semiconductor manufacturing,
-      energy research, economic analysis, and technical writing.
-    </p>
-
-    <a href="#portfolio" class="button">Explore My Work</a>
+  <div class="hero">
+    <div>
+      <div class="hero-eyebrow">Semiconductor Engineering &amp; Research</div>
+      <h1>Engineering,<br>Economics,<br><em>and Chips.</em></h1>
+      <p class="hero-sub">I believe semiconductors are where the next era of American competitiveness will be won or lost, and I want to be part of winning it. This site is a complement to my resume, collecting the projects, research, and writing that a resume cannot fully capture.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary">View my work</a>
+        <a href="your-cv.pdf" class="btn btn-ghost">Download CV</a>
+      </div>
+    </div>
+    <img src="IMG_3118.webp" alt="Achraf Elinani" class="monogram" style="object-fit: cover;">
   </div>
 
-  <div class="portrait">
-    <img src="IMG_3118.webp" alt="Portrait of Achraf Elinani">
-  </div>
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>About</h2>
+    </div>
+    <div class="about-body">
+      <div class="about-col">
+        <h3>Background</h3>
+        <p>I am an Electrical and Computer Engineering major at The Ohio State University, with a double minor in Economics and English. My technical focus spans semiconductor design, verification, and manufacturing.</p>
+      </div>
+      <div class="about-col">
+        <h3>Research focus</h3>
+        <p>I study how legal frameworks and economic incentives shape semiconductor investment, supply chain structure, and domestic manufacturing policy, with particular attention to U.S. competitiveness in advanced chip production.</p>
+      </div>
+      <div class="about-col">
+        <h3>Approach</h3>
+        <p>Understanding the economic and legal landscape surrounding semiconductors shapes how I approach engineering problems. Building things well requires knowing why they matter and where they fit in a larger system.</p>
+      </div>
+      <div class="about-col">
+        <h3>Currently</h3>
+        <p>I am preparing to join TSMC Arizona in support of Fab 21, a $165 billion facility central to the United States' effort to reshore advanced semiconductor manufacturing for AI and next-generation computing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Academic Papers &amp; Publications</h2>
+    </div>
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-date">In Progress</div>
+        <div>
+          <div class="entry-title">Industrial Policy, Semiconductor Exports, and Economic Growth: The Case of Taiwan</div>
+          <div class="entry-org">The Ohio State University, Department of Economics</div>
+          <div class="entry-desc">Analyzing Taiwan's strategic concentration in semiconductor manufacturing and how it produced sustained trade surpluses, attracted foreign capital, and generated the macroeconomic conditions for one of the most rapid economic transformations of the modern era.</div>
+          <div class="entry-tags">
+            <span class="tag">Macroeconomics</span>
+            <span class="tag">Open Economy</span>
+            <span class="tag">Industrial Strategy</span>
+            <span class="tag">Taiwan</span>
+            <span class="tag">Trade Policy</span>
+          </div>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-date">In Progress</div>
+        <div>
+          <div class="entry-title">Subsidizing Sovereignty: The Legal Architecture of the CHIPS and Science Act</div>
+          <div class="entry-org">The Undergraduate Law Review at Ohio State</div>
+          <div class="entry-desc">An examination of the CHIPS and Science Act's statutory framework, analyzing how its subsidy mechanisms, regulatory conditions, and enforcement provisions function as instruments of industrial policy and whether its legal architecture is sufficient to achieve long-term semiconductor sovereignty.</div>
+          <div class="entry-tags">
+            <span class="tag">CHIPS Act</span>
+            <span class="tag">Legal Analysis</span>
+            <span class="tag">Industrial Policy</span>
+            <span class="tag">Domestic Manufacturing</span>
+            <span class="tag">Semiconductor Policy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Personal Projects</h2>
+    </div>
+    <div class="entries">
+      <div class="entry">
+        <div class="entry-date">In Progress</div>
+        <div>
+          <div class="entry-title">FIFO Design and Verification</div>
+          <div class="entry-org">Personal Project</div>
+          <div class="entry-desc">A hardware design and verification project implementing a First In First Out buffer in SystemVerilog, with a focus on functional correctness and timing verification.</div>
+          <div class="entry-tags">
+            <span class="tag">SystemVerilog</span>
+            <span class="tag">RTL Design</span>
+            <span class="tag">Verification</span>
+            <span class="tag">Digital Logic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-body">
+      <div class="skill-group">
+        <h3>Engineering</h3>
+        <ul>
+          <li>Circuit Design</li>
+          <li>Design Validation</li>
+          <li>Chip Manufacturing</li>
+          <li>Fab Operations</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Economics</h3>
+        <ul>
+          <li>Trade Economics</li>
+          <li>Global Economics</li>
+          <li>Economic Development</li>
+          <li>Macroeconomic Theory</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>English</h3>
+        <ul>
+          <li>Legal Analysis</li>
+          <li>Legal Writing</li>
+          <li>Technical Writing</li>
+          <li>Professional Writing</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul>
+          <li>Arabic</li>
+          <li>French</li>
+          <li>Spanish</li>
+          <li>English</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Contact</h2>
+    </div>
+    <p style="font-size:14px; color:var(--muted); max-width:480px; margin-bottom:28px; font-weight:300; line-height:1.85;">Open to opportunities and conversations across engineering, research, & think tanks within the semiconductor industry.</p>
+    <div class="contact-body">
+      <a href="mailto:Elinani.1@buckeyemail.osu.edu" class="contact-link">✉ you@email.com</a>
+      <a href="https://linkedin.com/in/achrafelinani" class="contact-link" target="_blank">in LinkedIn</a>
+      <a href="https://github.com/achrafelinani" class="contact-link" target="_blank">⌥ GitHub</a>
+      <a href="your-cv.pdf" class="contact-link">↓ Download CV</a>
+    </div>
+  </section>
+
 </div>
 
-<!-- THREE DISCIPLINES -->
-
-<section id="portfolio">
-  <div class="section-heading">
-    <span class="number">01</span>
-    <h2>Three Disciplines.</h2>
-  </div>
-
-  <p class="description">
-    My academic and professional interests connect
-    engineering, economic research, and written
-    communication. Each discipline offers a different
-    way to understand technology and its impact.
-  </p>
-
-  <div class="disciplines">
-    <a href="#engineering" class="discipline">
-      <div class="category">01 / Applied Science</div>
-      <h3>Engineering</h3>
-      <p>
-        Semiconductor manufacturing, electrical
-        infrastructure, battery research, and
-        emerging technologies.
-      </p>
-      <span class="arrow">Explore Engineering →</span>
-    </a>
-
-    <a href="#economics" class="discipline">
-      <div class="category">02 / Research & Analysis</div>
-      <h3>Economics</h3>
-      <p>
-        Industrial policy, economic development,
-        technology commercialization, and
-        market research.
-      </p>
-      <span class="arrow">Explore Economics →</span>
-    </a>
-
-    <a href="#english" class="discipline">
-      <div class="category">03 / Communication</div>
-      <h3>English</h3>
-      <p>
-        Technical writing, grant proposals,
-        research communication, and legal analysis.
-      </p>
-      <span class="arrow">Explore English →</span>
-    </a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <div class="section-heading">
-    <span class="number">02</span>
-    <h2>About Me.</h2>
-  </div>
-
-  <div class="about-grid">
-    <div>
-      <p>
-        I'm an undergraduate studying Electrical and
-        Computer Engineering at The Ohio State University,
-        with minors in Economics and English.
-      </p>
-
-      <p>
-        My interests center on the relationship between
-        technology, manufacturing, and society. Through
-        semiconductor industry experience and energy
-        research, I've developed an appreciation for
-        the engineering behind modern industry.
-      </p>
-
-      <p>
-        Beyond engineering, I study the economic forces
-        shaping technological development and enjoy
-        communicating technical ideas through research
-        and professional writing.
-      </p>
-    </div>
-
-    <div>
-      <div class="fact">
-        <strong>University</strong>
-        <span>The Ohio State University</span>
-      </div>
-      <div class="fact">
-        <strong>Major</strong>
-        <span>Electrical & Computer Engineering</span>
-      </div>
-      <div class="fact">
-        <strong>Minors</strong>
-        <span>Economics & English</span>
-      </div>
-      <div class="fact">
-        <strong>Interests</strong>
-        <span>Semiconductors, Energy, Policy</span>
-      </div>
-      <div class="fact">
-        <strong>Location</strong>
-        <span>Columbus, Ohio</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROFESSIONAL EXPERIENCE -->
-
-<section id="experience">
-  <div class="section-heading">
-    <span class="number">03</span>
-    <h2>Professional Experience.</h2>
-  </div>
-
-  <p class="description">
-    Industry experience and professional interests
-    across semiconductor manufacturing and technology.
-    Role descriptions are included where confirmed.
-  </p>
-
-  <!-- TSMC -->
-
-  <article class="experience">
-    <img
-      class="company-logo"
-      src="https://cdn.simpleicons.org/tsmc"
-      alt="TSMC logo"
-      loading="lazy"
-    >
-
-    <div>
-      <h3>TSMC</h3>
-      <div class="organization">
-        Engineering Internship · Fab 21
-      </div>
-
-      <p>
-        Supported semiconductor facility operations,
-        equipment commissioning, and validation.
-        Worked with technical walkdowns and the
-        electrical infrastructure supporting
-        advanced semiconductor fabrication,
-        including facility power distribution
-        and reliability considerations.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Semiconductor Manufacturing</span>
-        <span class="tag">Electrical Infrastructure</span>
-        <span class="tag">Commissioning</span>
-      </div>
-
-      <div class="company-meta">Arizona, United States</div>
-    </div>
-  </article>
-
-  <!-- INTEL -->
-
-  <article class="experience">
-    <img
-      class="company-logo"
-      src="https://cdn.simpleicons.org/intel"
-      alt="Intel logo"
-      loading="lazy"
-    >
-
-    <div>
-      <h3>Intel</h3>
-      <div class="organization">
-        Role details to be added
-      </div>
-
-      <p>
-        Add your confirmed role title, location,
-        responsibilities, and technical accomplishments here.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Semiconductors</span>
-        <span class="tag">Role Details Pending</span>
-      </div>
-    </div>
-  </article>
-
-  <!-- SEAGATE -->
-
-  <article class="experience">
-    <img
-      class="company-logo"
-      src="https://cdn.simpleicons.org/seagate"
-      alt="Seagate Technology logo"
-      loading="lazy"
-    >
-
-    <div>
-      <h3>Seagate Technology</h3>
-      <div class="organization">
-        Role details to be added
-      </div>
-
-      <p>
-        Add your confirmed role title, location,
-        responsibilities, and technical accomplishments here.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Technology</span>
-        <span class="tag">Role Details Pending</span>
-      </div>
-    </div>
-  </article>
-</section>
-
-<!-- ENGINEERING -->
-
-<section id="engineering">
-  <div class="section-heading">
-    <span class="number">04</span>
-    <h2>Engineering.</h2>
-  </div>
-
-  <p class="description">
-    My engineering work spans semiconductor facilities,
-    battery manufacturing, and applied energy research.
-    I am particularly interested in the systems
-    and processes behind advanced technologies.
-  </p>
-
-  <div class="entry">
-    <div class="entry-label">
-      Battery Manufacturing<br>
-      Columbus, Ohio
-    </div>
-
-    <div>
-      <h3>Battery Cell R&D Center</h3>
-      <div class="organization">
-        OSU Institute for Materials & Manufacturing
-      </div>
-
-      <p>
-        Contributed to battery manufacturing research
-        infrastructure, including hazardous gas monitoring
-        for cleanroom operations and procurement of
-        specialized battery materials from international
-        suppliers.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Battery Manufacturing</span>
-        <span class="tag">Cleanroom Safety</span>
-        <span class="tag">Materials</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="entry-label">
-      NSF-Supported Research<br>
-      Columbus, Ohio
-    </div>
-
-    <div>
-      <h3>Energy Innovation Laboratory</h3>
-      <div class="organization">Undergraduate Research</div>
-
-      <p>
-        Conducted research involving lithium-ion
-        batteries, silicon-anode materials,
-        and cell performance. Experience included
-        battery cell fabrication, materials
-        characterization, and emerging applications
-        for energy storage technology.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Lithium-Ion</span>
-        <span class="tag">Cell Fabrication</span>
-        <span class="tag">Research</span>
-      </div>
-    </div>
-  </div>
-
-  <h3 style="font-size:30px;margin-top:45px">
-    Selected Engineering Projects
-  </h3>
-
-  <div class="cards">
-    <article class="card">
-      <div class="category">Engineering / Safety Systems</div>
-      <h3>Cleanroom Gas Detection System</h3>
-      <p>
-        Design work related to hazardous gas detection,
-        chemical process safety, and cleanroom operations
-        in a battery manufacturing research environment.
-      </p>
-      <div class="tags">
-        <span class="tag">Safety Systems</span>
-        <span class="tag">Manufacturing</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="category">Engineering / Energy Storage</div>
-      <h3>Lithium-Ion Battery Research</h3>
-      <p>
-        Research involving silicon anodes,
-        battery materials, cell fabrication,
-        characterization, and next-generation
-        energy storage technologies.
-      </p>
-      <div class="tags">
-        <span class="tag">Energy Storage</span>
-        <span class="tag">Materials</span>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ECONOMICS -->
-
-<section id="economics">
-  <div class="section-heading">
-    <span class="number">05</span>
-    <h2>Economics.</h2>
-  </div>
-
-  <p class="description">
-    My economic interests focus on industrial development,
-    international trade, technological innovation,
-    and the role of public policy in manufacturing.
-  </p>
-
-  <div class="entry">
-    <div class="entry-label">
-      Economic Development<br>
-      Semiconductor Industry
-    </div>
-
-    <div>
-      <h3>Taiwan's Semiconductor Industry</h3>
-      <div class="organization">Economic Research</div>
-
-      <p>
-        Research examining Taiwan's semiconductor
-        industry, its manufacturing ecosystem,
-        and the economic factors contributing
-        to its international competitiveness.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Development Economics</span>
-        <span class="tag">Taiwan</span>
-        <span class="tag">Manufacturing</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="entry-label">
-      Industrial Policy<br>
-      United States
-    </div>
-
-    <div>
-      <h3>The CHIPS and Science Act</h3>
-      <div class="organization">Policy & Economics</div>
-
-      <p>
-        Analysis of domestic semiconductor investment,
-        public incentives, industrial strategy,
-        and the economic challenges facing
-        American semiconductor manufacturing.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Industrial Policy</span>
-        <span class="tag">CHIPS Act</span>
-        <span class="tag">Economic Analysis</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="entry-label">
-      Market Research<br>
-      Energy Technology
-    </div>
-
-    <div>
-      <h3>Battery Technology Commercialization</h3>
-      <div class="organization">
-        Energy Innovation Laboratory · emPOWER
-      </div>
-
-      <p>
-        Conducted market analysis exploring
-        applications for emerging battery
-        technologies, including opportunities
-        in the drone industry. Examined
-        commercial markets, competitors,
-        and potential adoption.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Market Research</span>
-        <span class="tag">Commercialization</span>
-        <span class="tag">Energy</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ENGLISH -->
-
-<section id="english">
-  <div class="section-heading">
-    <span class="number">06</span>
-    <h2>English.</h2>
-  </div>
-
-  <p class="description">
-    My writing focuses on making complex subjects
-    understandable, accurate, and accessible,
-    with a particular interest in technical
-    communication, research writing, and legal analysis.
-  </p>
-
-  <div class="cards">
-    <article class="card">
-      <div class="category">
-        Technical Writing / Grant Proposal
-      </div>
-
-      <h3>SBIR Phase I Grant Proposal</h3>
-      <p>
-        A mock research grant proposal demonstrating
-        technical communication, research planning,
-        persuasive writing, and professional
-        document design.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Grant Writing</span>
-        <span class="tag">Technical Communication</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="category">
-        Technical Writing / Instructions
-      </div>
-
-      <h3>Technical Instruction Manual</h3>
-      <p>
-        An instructional writing project explaining
-        the safe use of an automated external
-        defibrillator through clear procedures,
-        accessible language, and document design.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Instructional Writing</span>
-        <span class="tag">Document Design</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="category">
-        Professional Writing / Research
-      </div>
-
-      <h3>Data Privacy Informational Sheet</h3>
-      <p>
-        An informational document comparing AI
-        deployment options and their implications
-        for proprietary research data, written
-        for a small research firm.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Research Communication</span>
-        <span class="tag">Information Design</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="category">
-        Analytical Writing / Law
-      </div>
-
-      <h3>Legal & Analytical Writing</h3>
-      <p>
-        Academic writing exploring legal reasoning,
-        evidence, analytical argumentation,
-        and communication to professional audiences.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Legal Writing</span>
-        <span class="tag">Analysis</span>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-  <div class="section-heading">
-    <span class="number">07</span>
-    <h2>Contact.</h2>
-  </div>
-
-  <h3 class="contact-title">
-    Interested in connecting?
-  </h3>
-
-  <p class="description">
-    I'm always interested in conversations about
-    engineering, research, economic development,
-    and professional writing.
-  </p>
-
-  <div class="contact-links">
-    <a href="mailto:Elinani.1@buckeyemail.osu.edu">
-      Email ↗
-    </a>
-
-    <a
-      href="https://www.linkedin.com/in/achrafelinani"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      LinkedIn ↗
-    </a>
-
-    <a
-      href="https://github.com/AchrafElinani"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      GitHub ↗
-    </a>
-  </div>
-</section>
-
-</main>
-
 <footer>
-  <div class="container footer-inner">
-    <span>
-      © <span id="year">2026</span> Achraf Elinani
-    </span>
-    <span>Engineering · Economics · English</span>
-  </div>
+  <div class="wrapper">© 2025 Achraf Elinani <span>·</span> Semiconductor Engineering &amp; Research</div>
 </footer>
-
-<script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
 
 </body>
 </html>
