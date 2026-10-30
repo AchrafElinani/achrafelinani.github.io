@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Achraf Elinani — Personal Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *,
@@ -21,8 +21,6 @@
   --bg: #f7f5f2;
   --bg2: #eeebe6;
   --border: #ddd9d3;
-  --accent: #2b2b2b;
-  --accent2: #444;
   --red: #b83232;
   --red2: #961f1f;
   --text: #1e1e1e;
@@ -34,7 +32,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -46,9 +44,14 @@ body {
 }
 
 .wrapper {
-  max-width: 1100px;
+  width: 100%;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 40px;
+}
+
+a {
+  color: inherit;
 }
 
 /* NAVIGATION */
@@ -62,21 +65,20 @@ nav {
 }
 
 nav .inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 32px;
+  max-width: 1360px;
+  margin: auto;
+  padding: 0 40px;
+  min-height: 66px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 56px;
-  gap: 20px;
+  gap: 25px;
 }
 
 nav .logo {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
-  color: var(--text);
   text-decoration: none;
 }
 
@@ -87,48 +89,49 @@ nav .logo span {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 26px;
+  align-items: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-nav a {
-  color: var(--muted);
+nav ul a {
+  font-family: var(--serif);
   text-decoration: none;
-  font-size: 13px;
-  transition: color 0.2s;
+  font-size: 20px;
+  transition: color .2s;
 }
 
-nav a:hover {
+nav ul a:hover {
   color: var(--red);
 }
 
 /* HERO */
 
 .hero {
-  padding: 80px 0 64px;
+  padding: 75px 0;
   border-bottom: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: 65px;
   align-items: center;
 }
 
 .hero-eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--red);
+  font-family: var(--sans);
+  font-size: 12px;
   font-weight: 500;
-  margin-bottom: 20px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
 }
 
 h1 {
   font-family: var(--serif);
-  font-size: clamp(38px, 5.5vw, 58px);
+  font-size: clamp(52px, 6.2vw, 90px);
   font-weight: 400;
-  line-height: 1.1;
-  color: var(--text);
-  margin-bottom: 20px;
+  line-height: 1.03;
+  margin-bottom: 27px;
 }
 
 h1 em {
@@ -137,35 +140,34 @@ h1 em {
 }
 
 .hero-sub {
-  font-size: 15px;
-  color: var(--muted);
-  max-width: 500px;
-  line-height: 1.85;
-  margin-bottom: 32px;
+  max-width: 680px;
+  font-size: 16px;
   font-weight: 300;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 20px;
 }
 
 .hero-cta {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 24px;
+  padding: 11px 26px;
   font-family: var(--sans);
   font-size: 13px;
-  font-weight: 500;
   text-decoration: none;
   border-radius: 2px;
-  transition: all 0.18s;
-  cursor: pointer;
+  transition: all .2s;
 }
 
 .btn-primary {
   background: var(--red);
-  color: #fff;
+  color: white;
 }
 
 .btn-primary:hover {
@@ -175,7 +177,6 @@ h1 em {
 .btn-ghost {
   border: 1px solid var(--border);
   color: var(--muted);
-  background: transparent;
 }
 
 .btn-ghost:hover {
@@ -184,48 +185,50 @@ h1 em {
 }
 
 .profile-photo {
-  width: 360px;
-  height: 360px;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1;
   border: 2px solid var(--red);
   border-radius: 2px;
   object-fit: cover;
   background: var(--bg2);
+  justify-self: end;
 }
 
 /* SECTIONS */
 
 section {
-  padding: 64px 0;
+  padding: 58px 0;
   border-bottom: 1px solid var(--border);
 }
 
 .section-header {
   display: flex;
   align-items: baseline;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 17px;
+  margin-bottom: 25px;
 }
 
 .section-num {
-  font-size: 12px;
   color: var(--red);
+  font-family: var(--sans);
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.06em;
 }
 
 h2 {
   font-family: var(--serif);
-  font-size: clamp(25px, 3vw, 32px);
+  font-size: clamp(36px, 4vw, 49px);
+  line-height: 1.2;
   font-weight: 400;
-  color: var(--text);
 }
 
 .section-intro {
-  font-size: 14px;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.5;
   color: var(--muted);
-  font-weight: 300;
-  max-width: 700px;
-  line-height: 1.85;
+  max-width: 1000px;
   margin-bottom: 30px;
 }
 
@@ -233,27 +236,31 @@ h2 {
 
 .about-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 85px;
+  row-gap: 35px;
 }
 
 .about-col h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--red);
+  font-family: var(--serif);
+  font-size: 25px;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+.about-col h3::after {
+  content: ".";
+  color: var(--red);
 }
 
 .about-col p {
-  font-size: 14px;
   color: var(--muted);
-  line-height: 1.85;
+  font-size: 14px;
+  line-height: 1.9;
   font-weight: 300;
 }
 
-/* PORTFOLIO ENTRIES */
+/* PROJECTS AND PAPERS */
 
 .entries {
   display: flex;
@@ -261,11 +268,11 @@ h2 {
 }
 
 .entry {
-  padding: 28px 0;
+  padding: 25px 0;
   border-bottom: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 24px;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 30px;
 }
 
 .entry:last-child {
@@ -273,66 +280,66 @@ h2 {
 }
 
 .entry-date {
-  font-size: 12px;
+  font-family: var(--serif);
+  font-size: 17px;
   color: var(--light);
   padding-top: 3px;
-  font-weight: 300;
 }
 
 .entry-title {
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 29px;
   font-weight: 500;
-  color: var(--text);
-  margin-bottom: 5px;
-  line-height: 1.35;
+  line-height: 1.2;
+  margin-bottom: 6px;
 }
 
 .entry-org {
-  font-size: 11px;
+  font-family: var(--sans);
   color: var(--red);
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.07em;
-  margin-bottom: 9px;
   text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 9px;
 }
 
 .entry-desc {
   font-size: 14px;
   color: var(--muted);
-  line-height: 1.85;
   font-weight: 300;
-  max-width: 760px;
+  line-height: 1.85;
+  max-width: 950px;
 }
 
 .entry-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 14px;
+  gap: 7px;
+  margin-top: 13px;
 }
 
 .tag {
-  font-size: 10px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
   color: var(--light);
   border: 1px solid var(--border);
-  padding: 3px 10px;
+  padding: 3px 11px;
   border-radius: 1px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
 }
 
-/* CAREER TIMELINE */
+/* TIMELINE */
 
 .timeline {
+  margin-left: 9px;
+  padding-left: 35px;
   border-left: 1px solid var(--border);
-  margin-left: 7px;
-  padding-left: 30px;
 }
 
 .timeline-item {
   position: relative;
-  padding-bottom: 42px;
+  padding-bottom: 36px;
 }
 
 .timeline-item:last-child {
@@ -342,50 +349,53 @@ h2 {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -36px;
-  top: 8px;
+  left: -42px;
+  top: 9px;
   width: 11px;
   height: 11px;
-  background: var(--bg);
   border: 2px solid var(--red);
+  background: var(--bg);
   border-radius: 50%;
 }
 
 .timeline-date {
-  font-size: 12px;
+  font-family: var(--serif);
+  font-size: 18px;
   color: var(--light);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .timeline-title {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 500;
-  margin-bottom: 3px;
+  line-height: 1.2;
+  margin-bottom: 6px;
 }
 
 .timeline-role {
-  font-size: 11px;
   color: var(--red);
-  letter-spacing: 0.07em;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .08em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .timeline-desc {
-  color: var(--muted);
   font-size: 14px;
-  line-height: 1.8;
   font-weight: 300;
-  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.85;
+  max-width: 950px;
 }
 
 .upcoming {
-  color: var(--red);
   font-family: var(--sans);
   font-size: 10px;
-  letter-spacing: 0.07em;
+  color: var(--red);
   text-transform: uppercase;
+  letter-spacing: .07em;
   margin-left: 10px;
 }
 
@@ -393,33 +403,31 @@ h2 {
 
 .contact-body {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 .contact-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   border: 1px solid var(--border);
+  padding: 12px 22px;
   border-radius: 2px;
-  padding: 12px 20px;
   text-decoration: none;
   color: var(--muted);
-  font-size: 13px;
-  transition: all 0.18s;
+  font-family: var(--serif);
+  font-size: 20px;
+  transition: all .2s;
 }
 
 .contact-link:hover {
-  border-color: var(--red);
   color: var(--red);
+  border-color: var(--red);
 }
 
 footer {
-  padding: 32px 0;
+  padding: 30px 0;
   text-align: center;
-  font-size: 12px;
   color: var(--light);
+  font-size: 12px;
 }
 
 footer span {
@@ -428,62 +436,74 @@ footer span {
 
 /* MOBILE */
 
-@media (max-width: 800px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-photo {
-    width: min(100%, 360px);
-    height: auto;
-    aspect-ratio: 1;
-  }
-
+@media (max-width: 850px) {
   nav .inner {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   nav ul {
-    gap: 14px;
+    gap: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-photo {
+    justify-self: start;
+    max-width: 360px;
   }
 }
 
 @media (max-width: 600px) {
-  .wrapper {
-    padding: 0 22px;
+  .wrapper,
+  nav .inner {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .hero {
     padding: 55px 0;
   }
 
+  h1 {
+    font-size: 51px;
+  }
+
   section {
-    padding: 50px 0;
+    padding: 47px 0;
   }
 
   .about-body {
     grid-template-columns: 1fr;
-    gap: 26px;
+    row-gap: 25px;
   }
 
   .entry {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 5px;
   }
 
-  .section-header {
-    margin-bottom: 28px;
+  .entry-title {
+    font-size: 25px;
+  }
+
+  .timeline-title {
+    font-size: 26px;
+  }
+
+  .section-intro {
+    font-size: 20px;
   }
 }
 </style>
 </head>
 
 <body>
-
-<!-- NAVIGATION -->
 
 <nav>
   <div class="inner">
@@ -504,7 +524,7 @@ footer span {
 
 <div class="wrapper">
 
-<!-- HOME -->
+<!-- HERO -->
 
 <div class="hero" id="home">
   <div>
@@ -520,16 +540,17 @@ footer span {
 
     <p class="hero-sub">
       I am an Electrical and Computer Engineering
-      student at The Ohio State University, pursuing
-      minors in Economics and English.
-      My interests span energy systems, semiconductor
-      manufacturing, economic research, and
-      technical communication.
+      student at The Ohio State University,
+      pursuing minors in Economics and English.
+      My interests span renewable energy,
+      semiconductor manufacturing, economic
+      research, and technical communication.
     </p>
 
     <p class="hero-sub">
-      This website is a collection of my projects,
-      research, writing, and professional experiences.
+      This portfolio is a collection of my
+      technical projects, economic research,
+      writing, and professional experiences.
     </p>
 
     <div class="hero-cta">
@@ -544,7 +565,7 @@ footer span {
 
   <img
     src="IMG_3118.webp"
-    alt="Portrait of Achraf Elinani"
+    alt="Achraf Elinani"
     class="profile-photo"
   >
 </div>
@@ -563,37 +584,37 @@ footer span {
       <h3>Background</h3>
       <p>
         I am an Electrical and Computer Engineering
-        major at The Ohio State University, with a
-        double minor in Economics and English.
+        major at The Ohio State University, pursuing
+        a double minor in Economics and English.
       </p>
     </div>
 
     <div class="about-col">
-      <h3>Engineering Interests</h3>
+      <h3>Engineering</h3>
       <p>
-        My engineering interests include power systems,
-        renewable energy, battery technologies,
-        and semiconductor manufacturing.
+        My technical interests include renewable
+        energy, electrical power systems, battery
+        technologies, and semiconductor manufacturing.
       </p>
     </div>
 
     <div class="about-col">
-      <h3>Economics & Research</h3>
+      <h3>Economics</h3>
       <p>
-        I am interested in how markets, public policy,
-        and economic incentives shape technological
-        development, infrastructure investment,
-        and industrial competitiveness.
+        I am interested in the economic forces
+        shaping technological development,
+        electricity markets, industrial policy,
+        and infrastructure investment.
       </p>
     </div>
 
     <div class="about-col">
-      <h3>Writing & Communication</h3>
+      <h3>English</h3>
       <p>
-        Through my studies in English, I explore
-        technical writing, professional communication,
-        and research writing as ways to communicate
-        complex ideas clearly.
+        My writing interests include technical
+        communication, professional writing,
+        research papers, and the communication
+        of complex technical ideas.
       </p>
     </div>
 
@@ -610,9 +631,9 @@ footer span {
   </div>
 
   <p class="section-intro">
-    Selected engineering projects focusing on power
-    systems, battery technology, renewable energy,
-    and optimization.
+    Selected projects examining power systems,
+    battery technologies, renewable energy
+    integration, and technical optimization.
   </p>
 
   <div class="entries">
@@ -628,12 +649,12 @@ footer span {
           Power Systems · Renewable Energy
         </div>
 
-        <div class="entry-desc">
-          A solar and battery microgrid project
-          exploring photovoltaic generation,
-          energy storage integration, load
-          management, and system optimization.
-        </div>
+        <p class="entry-desc">
+          A microgrid project exploring photovoltaic
+          electricity generation, battery energy
+          storage, load management, and power
+          system optimization.
+        </p>
 
         <div class="entry-tags">
           <span class="tag">Solar PV</span>
@@ -655,17 +676,17 @@ footer span {
           Hardware · Embedded Systems
         </div>
 
-        <div class="entry-desc">
-          A battery management system project
-          focused on battery monitoring, protection,
+        <p class="entry-desc">
+          A hardware project focused on lithium-ion
+          battery monitoring, protection systems,
           measurement, and performance testing.
-        </div>
+        </p>
 
         <div class="entry-tags">
           <span class="tag">BMS</span>
           <span class="tag">Electronics</span>
-          <span class="tag">Battery Testing</span>
           <span class="tag">Embedded Systems</span>
+          <span class="tag">Testing</span>
         </div>
       </div>
     </div>
@@ -681,18 +702,17 @@ footer span {
           Engineering Economics · Optimization
         </div>
 
-        <div class="entry-desc">
-          A techno-economic study examining
+        <p class="entry-desc">
+          A techno-economic study analyzing
           renewable energy investment decisions
-          using financial modeling, engineering
-          performance, and optimization methods.
-        </div>
+          through engineering performance,
+          financial modeling, and optimization.
+        </p>
 
         <div class="entry-tags">
           <span class="tag">Optimization</span>
-          <span class="tag">Financial Modeling</span>
           <span class="tag">Energy Economics</span>
-          <span class="tag">Renewables</span>
+          <span class="tag">Financial Modeling</span>
         </div>
       </div>
     </div>
@@ -710,9 +730,9 @@ footer span {
   </div>
 
   <p class="section-intro">
-    Economic research examining the relationships
-    between technology, energy markets, industrial
-    development, and public policy.
+    Research exploring technology, international
+    economics, electricity markets, industrial
+    policy, and infrastructure investment.
   </p>
 
   <div class="entries">
@@ -728,17 +748,18 @@ footer span {
           Industrial Policy · International Economics
         </div>
 
-        <div class="entry-desc">
-          An examination of Taiwan's semiconductor
-          industry, its role in international trade,
-          industrial policy, economic development,
-          and global technological competitiveness.
-        </div>
+        <p class="entry-desc">
+          An economic analysis of Taiwan's
+          semiconductor industry, examining
+          international trade, industrial policy,
+          economic development, and global
+          technological competitiveness.
+        </p>
 
         <div class="entry-tags">
           <span class="tag">Taiwan</span>
           <span class="tag">Semiconductors</span>
-          <span class="tag">Trade</span>
+          <span class="tag">International Trade</span>
           <span class="tag">Industrial Policy</span>
         </div>
       </div>
@@ -755,17 +776,17 @@ footer span {
           Energy Economics · Public Policy
         </div>
 
-        <div class="entry-desc">
-          Research exploring the impact of
-          data center electricity demand on
-          utility rates, infrastructure investment,
-          electricity markets, and consumers.
-        </div>
+        <p class="entry-desc">
+          Research exploring how data center
+          electricity demand affects utility
+          rates, electricity markets,
+          infrastructure investment, and
+          residential consumers.
+        </p>
 
         <div class="entry-tags">
           <span class="tag">Data Centers</span>
           <span class="tag">Electricity Rates</span>
-          <span class="tag">Utilities</span>
           <span class="tag">Energy Policy</span>
         </div>
       </div>
@@ -782,18 +803,17 @@ footer span {
           Energy Markets · Investment Analysis
         </div>
 
-        <div class="entry-desc">
-          An economic analysis of grid-scale
-          battery storage, examining energy
+        <p class="entry-desc">
+          An economic examination of grid-scale
+          energy storage, including electricity
           arbitrage, revenue opportunities,
-          capital costs, and investment feasibility.
-        </div>
+          investment costs, and project feasibility.
+        </p>
 
         <div class="entry-tags">
-          <span class="tag">Battery Storage</span>
+          <span class="tag">Energy Storage</span>
           <span class="tag">Energy Arbitrage</span>
           <span class="tag">Electricity Markets</span>
-          <span class="tag">Investment</span>
         </div>
       </div>
     </div>
@@ -811,9 +831,9 @@ footer span {
   </div>
 
   <p class="section-intro">
-    Selected work in technical, professional,
-    academic, and research writing.
-    Portfolio pieces will be added here.
+    A collection of technical, professional,
+    and academic writing. Selected works
+    will be added as the portfolio develops.
   </p>
 
   <div class="entries">
@@ -821,48 +841,33 @@ footer span {
     <div class="entry">
       <div class="entry-date">Placeholder</div>
       <div>
-        <div class="entry-title">
-          Writing Sample I
-        </div>
-        <div class="entry-org">
-          To Be Determined
-        </div>
-        <div class="entry-desc">
-          Title, description, and document
-          to be added.
-        </div>
+        <div class="entry-title">Writing Sample I</div>
+        <div class="entry-org">To Be Determined</div>
+        <p class="entry-desc">
+          Title and description to be added.
+        </p>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-date">Placeholder</div>
       <div>
-        <div class="entry-title">
-          Writing Sample II
-        </div>
-        <div class="entry-org">
-          To Be Determined
-        </div>
-        <div class="entry-desc">
-          Title, description, and document
-          to be added.
-        </div>
+        <div class="entry-title">Writing Sample II</div>
+        <div class="entry-org">To Be Determined</div>
+        <p class="entry-desc">
+          Title and description to be added.
+        </p>
       </div>
     </div>
 
     <div class="entry">
       <div class="entry-date">Placeholder</div>
       <div>
-        <div class="entry-title">
-          Writing Sample III
-        </div>
-        <div class="entry-org">
-          To Be Determined
-        </div>
-        <div class="entry-desc">
-          Title, description, and document
-          to be added.
-        </div>
+        <div class="entry-title">Writing Sample III</div>
+        <div class="entry-org">To Be Determined</div>
+        <p class="entry-desc">
+          Title and description to be added.
+        </p>
       </div>
     </div>
 
@@ -870,6 +875,7 @@ footer span {
 </section>
 
 <!-- CAREER TIMELINE -->
+<!-- NEWEST TO OLDEST -->
 
 <section id="experience">
 
@@ -879,130 +885,124 @@ footer span {
   </div>
 
   <p class="section-intro">
-    My professional experience across energy
-    research, semiconductor manufacturing,
-    and economics.
+    A chronological overview of my professional
+    experience across research, energy,
+    semiconductors, and economics.
   </p>
 
   <div class="timeline">
 
-    <div class="timeline-item">
-      <div class="timeline-date">
-        Month YYYY – Month YYYY
-      </div>
-
-      <div class="timeline-title">
-        The National Science Foundation
-      </div>
-
-      <div class="timeline-role">
-        Institute for Materials & Manufacturing Research
-      </div>
-
-      <p class="timeline-desc">
-        Research involving next-generation
-        lithium-ion batteries, battery performance,
-        and energy technology commercialization.
-      </p>
-    </div>
+    <!-- SEAGATE -->
 
     <div class="timeline-item">
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-
-      <div class="timeline-title">
-        Battery Cell R&D Center
-      </div>
-
-      <div class="timeline-role">
-        The Ohio State University
-      </div>
-
-      <p class="timeline-desc">
-        Battery research and manufacturing
-        development, including materials
-        sourcing and research infrastructure.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        Month YYYY – Month YYYY
-      </div>
-
-      <div class="timeline-title">
-        TSMC
-      </div>
-
-      <div class="timeline-role">
-        Semiconductor Manufacturing · Fab 21
-      </div>
-
-      <p class="timeline-desc">
-        Experience with semiconductor
-        manufacturing infrastructure,
-        electrical systems, equipment
-        operations, and facility engineering.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        Month YYYY – Month YYYY
-      </div>
-
-      <div class="timeline-title">
-        The Ohio State University, Department of Economics
-      </div>
-
-      <div class="timeline-role">
-        Position Title Placeholder
-      </div>
-
-      <p class="timeline-desc">
-        Research responsibilities and
-        accomplishments to be added.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        Month YYYY – Month YYYY
-      </div>
-
-      <div class="timeline-title">
-        Intel Corporation
-        <span class="upcoming">Upcoming</span>
-      </div>
-
-      <div class="timeline-role">
-        Position Title Placeholder
-      </div>
-
-      <p class="timeline-desc">
-        Role details and experience
-        to be added.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">
-        Month YYYY – Month YYYY
-      </div>
-
       <div class="timeline-title">
         Seagate Technology
         <span class="upcoming">Upcoming</span>
       </div>
-
       <div class="timeline-role">
         Position Title Placeholder
       </div>
-
       <p class="timeline-desc">
-        Role details and experience
-        to be added.
+        Position responsibilities, technical work,
+        and accomplishments to be added.
+      </p>
+    </div>
+
+    <!-- INTEL -->
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Month YYYY – Month YYYY
+      </div>
+      <div class="timeline-title">
+        Intel
+        <span class="upcoming">Upcoming</span>
+      </div>
+      <div class="timeline-role">
+        Position Title Placeholder
+      </div>
+      <p class="timeline-desc">
+        Position responsibilities, technical work,
+        and accomplishments to be added.
+      </p>
+    </div>
+
+    <!-- OSU ECONOMICS -->
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Month YYYY – Month YYYY
+      </div>
+      <div class="timeline-title">
+        OSU Department of Economics
+      </div>
+      <div class="timeline-role">
+        Position Title Placeholder
+      </div>
+      <p class="timeline-desc">
+        Economic research responsibilities
+        and accomplishments to be added.
+      </p>
+    </div>
+
+    <!-- TSMC -->
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Month YYYY – Month YYYY
+      </div>
+      <div class="timeline-title">
+        TSMC
+      </div>
+      <div class="timeline-role">
+        Semiconductor Manufacturing · Fab 21
+      </div>
+      <p class="timeline-desc">
+        Experience involving semiconductor
+        fabrication infrastructure, electrical
+        power systems, equipment operations,
+        and facility engineering.
+      </p>
+    </div>
+
+    <!-- BATTERY CELL R&D CENTER -->
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Month YYYY – Month YYYY
+      </div>
+      <div class="timeline-title">
+        Battery Cell R&D Center
+      </div>
+      <div class="timeline-role">
+        The Ohio State University
+      </div>
+      <p class="timeline-desc">
+        Supported battery manufacturing research,
+        materials sourcing, and the development
+        of battery research infrastructure.
+      </p>
+    </div>
+
+    <!-- NSF -->
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Month YYYY – Month YYYY
+      </div>
+      <div class="timeline-title">
+        National Science Foundation
+      </div>
+      <div class="timeline-role">
+        Energy Innovation Research
+      </div>
+      <p class="timeline-desc">
+        Research involving lithium-ion batteries,
+        energy technology innovation, and
+        technology commercialization.
       </p>
     </div>
 
@@ -1020,7 +1020,7 @@ footer span {
 
   <p class="section-intro">
     Open to opportunities and conversations
-    across engineering, economics, research,
+    across engineering, research, economics,
     and technology.
   </p>
 
