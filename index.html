@@ -77,7 +77,7 @@ nav .inner {
 
 nav .logo {
   font-family: var(--serif);
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
   text-decoration: none;
 }
@@ -97,7 +97,7 @@ nav ul {
 nav ul a {
   font-family: var(--serif);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
   transition: color .2s;
 }
 
@@ -128,7 +128,7 @@ nav ul a:hover {
 
 h1 {
   font-family: var(--serif);
-  font-size: clamp(52px, 6.2vw, 90px);
+  font-size: clamp(46px, 5.5vw, 76px);
   font-weight: 400;
   line-height: 1.03;
   margin-bottom: 27px;
@@ -218,14 +218,14 @@ section {
 
 h2 {
   font-family: var(--serif);
-  font-size: clamp(36px, 4vw, 49px);
+  font-size: clamp(31px, 3.5vw, 41px);
   line-height: 1.2;
   font-weight: 400;
 }
 
 .section-intro {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 19px;
   line-height: 1.5;
   color: var(--muted);
   max-width: 1000px;
@@ -243,7 +243,7 @@ h2 {
 
 .about-col h3 {
   font-family: var(--serif);
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -281,14 +281,14 @@ h2 {
 
 .entry-date {
   font-family: var(--serif);
-  font-size: 17px;
+  font-size: 15px;
   color: var(--light);
   padding-top: 3px;
 }
 
 .entry-title {
   font-family: var(--serif);
-  font-size: 29px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 6px;
@@ -329,7 +329,7 @@ h2 {
   letter-spacing: .06em;
 }
 
-/* TIMELINE */
+/* CAREER TIMELINE */
 
 .timeline {
   margin-left: 9px;
@@ -360,17 +360,32 @@ h2 {
 
 .timeline-date {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--light);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+/* COMPANY LOGOS */
+
+.timeline-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
 }
 
 .timeline-title {
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 6px;
 }
 
 .timeline-role {
@@ -414,7 +429,7 @@ h2 {
   text-decoration: none;
   color: var(--muted);
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 17px;
   transition: all .2s;
 }
 
@@ -471,7 +486,7 @@ footer span {
   }
 
   h1 {
-    font-size: 51px;
+    font-size: 46px;
   }
 
   section {
@@ -489,21 +504,29 @@ footer span {
   }
 
   .entry-title {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   .timeline-title {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .company-logo {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
   }
 
   .section-intro {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAVIGATION -->
 
 <nav>
   <div class="inner">
@@ -898,13 +921,24 @@ footer span {
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-      <div class="timeline-title">
-        Seagate Technology
-        <span class="upcoming">Upcoming</span>
+
+      <div class="timeline-heading">
+        <img
+          class="company-logo"
+          src="https://www.google.com/s2/favicons?domain=seagate.com&amp;sz=128"
+          alt="Seagate Technology logo"
+          loading="lazy"
+        >
+        <div class="timeline-title">
+          Seagate Technology
+          <span class="upcoming">Upcoming</span>
+        </div>
       </div>
+
       <div class="timeline-role">
         Position Title Placeholder
       </div>
+
       <p class="timeline-desc">
         Position responsibilities, technical work,
         and accomplishments to be added.
@@ -917,31 +951,54 @@ footer span {
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-      <div class="timeline-title">
-        Intel Corporation
-        <span class="upcoming">Upcoming</span>
+
+      <div class="timeline-heading">
+        <img
+          class="company-logo"
+          src="https://www.google.com/s2/favicons?domain=intel.com&amp;sz=128"
+          alt="Intel Corporation logo"
+          loading="lazy"
+        >
+        <div class="timeline-title">
+          Intel Corporation
+          <span class="upcoming">Upcoming</span>
+        </div>
       </div>
+
       <div class="timeline-role">
         Position Title Placeholder
       </div>
+
       <p class="timeline-desc">
         Position responsibilities, technical work,
         and accomplishments to be added.
       </p>
     </div>
 
-    <!-- OSU ECONOMICS -->
+    <!-- OHIO STATE ECONOMICS -->
 
     <div class="timeline-item">
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-      <div class="timeline-title">
-        The Ohio State University, Department of Economics
+
+      <div class="timeline-heading">
+        <img
+          class="company-logo"
+          src="https://www.google.com/s2/favicons?domain=osu.edu&amp;sz=128"
+          alt="Ohio State University logo"
+          loading="lazy"
+        >
+        <div class="timeline-title">
+          The Ohio State University,
+          Department of Economics
+        </div>
       </div>
+
       <div class="timeline-role">
         Position Title Placeholder
       </div>
+
       <p class="timeline-desc">
         Economic research responsibilities
         and accomplishments to be added.
@@ -954,12 +1011,23 @@ footer span {
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-      <div class="timeline-title">
-        TSMC
+
+      <div class="timeline-heading">
+        <img
+          class="company-logo"
+          src="https://www.google.com/s2/favicons?domain=tsmc.com&amp;sz=128"
+          alt="TSMC logo"
+          loading="lazy"
+        >
+        <div class="timeline-title">
+          TSMC
+        </div>
       </div>
+
       <div class="timeline-role">
         Semiconductor Manufacturing · Fab 21
       </div>
+
       <p class="timeline-desc">
         Experience involving semiconductor
         fabrication infrastructure, electrical
@@ -974,12 +1042,24 @@ footer span {
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-      <div class="timeline-title">
-        The Ohio State University, Battery Cell R&D Center
+
+      <div class="timeline-heading">
+        <img
+          class="company-logo"
+          src="https://www.google.com/s2/favicons?domain=osu.edu&amp;sz=128"
+          alt="Ohio State University logo"
+          loading="lazy"
+        >
+        <div class="timeline-title">
+          The Ohio State University,
+          Battery Cell R&D Center
+        </div>
       </div>
+
       <div class="timeline-role">
         The Ohio State University
       </div>
+
       <p class="timeline-desc">
         Supported battery manufacturing research,
         materials sourcing, and the development
@@ -987,18 +1067,29 @@ footer span {
       </p>
     </div>
 
-    <!-- NSF -->
+    <!-- NATIONAL SCIENCE FOUNDATION -->
 
     <div class="timeline-item">
       <div class="timeline-date">
         Month YYYY – Month YYYY
       </div>
-      <div class="timeline-title">
-        The National Science Foundation
+
+      <div class="timeline-heading">
+        <img
+          class="company-logo"
+          src="https://www.google.com/s2/favicons?domain=nsf.gov&amp;sz=128"
+          alt="National Science Foundation logo"
+          loading="lazy"
+        >
+        <div class="timeline-title">
+          The National Science Foundation
+        </div>
       </div>
+
       <div class="timeline-role">
         Energy Innovation Research
       </div>
+
       <p class="timeline-desc">
         Research involving lithium-ion batteries,
         energy technology innovation, and
@@ -1052,6 +1143,8 @@ footer span {
 </section>
 
 </div>
+
+<!-- FOOTER -->
 
 <footer>
   <div class="wrapper">
